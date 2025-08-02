@@ -228,14 +228,16 @@ footer .icon {
 
 /* ----- HANDLE PREFERS REDUCED MOTION FOR THE ICON ANIMATIONS ----- */
 /* --------------- BEGIN USER PREFERS REDUCED MOTION QUERY --------------- */
-@-webkit-keyframes icon-animation {
-  0% {
-    font-variation-settings: "TIME" 1;
+@media (prefers-reduced-motion: reduce) {
+  @-webkit-keyframes icon-animation {
+    0% {
+      font-variation-settings: "TIME" 1;
+    }
   }
-}
-@keyframes icon-animation {
-  0% {
-    font-variation-settings: "TIME" 1;
+  @keyframes icon-animation {
+    0% {
+      font-variation-settings: "TIME" 1;
+    }
   }
 }
 /* --------------- END USER PREFERS REDUCED MOTION QUERY --------------- */
@@ -329,7 +331,7 @@ img {
 
 /* ---------- MEDIUM SCREEN STYLES ---------- */
 /* --------------- BEGIN MEDIUM SCREEN SIZES --------------- */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 680px) {
   header,
   footer {
     background-color: var(--black);
@@ -401,16 +403,19 @@ img {
   #eight {
     grid-row: 3/4;
   }
+
+ 
 }
 
 /* --------------- END LARGE SCREEN SIZES --------------- */
 
 /* ---------- ADJUSTING RESPONSIVE IMAGE SIZE ---------- */
 /* --------------- BEGIN RESPONSIVE IMAGE ADJUST SIZES --------------- */
-img {
-  width: 300px;
-  max-width: 300px;
-}
+
+ img {
+    width: 300px;
+    max-width: 300px;
+  }
 /* --------------- END RESPONSIVE IMAGE ADJUST SIZES --------------- */
 
 /* ---------- EXTRA LARGE SCREEN STYLES ---------- */
